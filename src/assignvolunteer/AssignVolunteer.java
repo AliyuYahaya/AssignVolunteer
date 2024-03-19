@@ -16,6 +16,9 @@ public class AssignVolunteer {
        sampleClass();
     }
     
+    /**
+     * 
+     */
     public static void sampleClass()
     {
         int donationType;
@@ -29,13 +32,15 @@ public class AssignVolunteer {
         System.out.println("What type of donation is this:?");
         System.out.print("Enter " + CLOTHING_CODE + " for clothing, " + OTHER_CODE + " for anything else... ");
         donationType = input.nextInt();
+        input.close(); 
         
         if(donationType == CLOTHING_CODE)
-            volunteer = CLOTHING_PRICER;
+            {volunteer = CLOTHING_PRICER;}
         else
-            volunteer = OTHER_PRICER;
+            {volunteer = OTHER_PRICER;}
         
         System.out.println("You entered " + donationType);
-        System.out.println("The volunteer who will price this item is " + volunteer);
+        String volunteer2 = volunteer;
+        System.out.println("The volunteer who will price this item is " + volunteer2);
     }
 }
